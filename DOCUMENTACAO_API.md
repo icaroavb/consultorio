@@ -690,16 +690,12 @@ curl -X PATCH http://localhost:8080/api/pacientes/1/desativar
 
 ### Executar a aplicação:
 ```bash
-# Com MySQL (padrão)
+# Com MySQL
 .\mvnw.cmd spring-boot:run
-
-# Com H2 (desenvolvimento)
-$env:SPRING_PROFILES_ACTIVE="dev"; .\mvnw.cmd spring-boot:run
 ```
 
 ### URLs importantes:
 - **API Base**: `http://localhost:8080/api/pacientes`
-- **Console H2**: `http://localhost:8080/h2-console` (apenas no modo dev)
 - **Teste de Conexão**: `http://localhost:8080/api/pacientes/testar-conexao`
 
 ---
