@@ -7,50 +7,10 @@ Este é um sistema backend CRUD para gerenciamento de pacientes em um consultór
 - **Java 21**
 - **Spring Boot 3.5.6**
 - **Spring Data JPA**
-- **H2 Database** (para desenvolvimento)
-- **MySQL** (para produção)
+- **MySQL**
 - **Maven**
 
 ## Configuração do Projeto
-
-### Banco de Dados MySQL
-
-#### 1. Instalar MySQL
-- Baixe e instale o MySQL Server
-- Configure usuário: `root` e senha: `123456`
-- Ou altere as credenciais em `application.properties`
-
-#### 2. Criar Banco de Dados
-```sql
-CREATE DATABASE consultorio;
-```
-
-#### 3. Configurações Disponíveis
-
-**Para Desenvolvimento (H2):**
-```bash
-mvn spring-boot:run -Dspring.profiles.active=dev
-```
-- Console H2: http://localhost:8080/h2-console
-- JDBC URL: `jdbc:h2:mem:consultorio`
-- Username: `sa`, Password: (vazio)
-
-**Para Produção (MySQL):**
-```bash
-mvn spring-boot:run -Dspring.profiles.active=prod
-```
-
-**Padrão (MySQL):**
-```bash
-mvn spring-boot:run
-```
-
-### Configurações do MySQL
-Edite `src/main/resources/application.properties` se necessário:
-```properties
-spring.datasource.username=SEU_USUARIO
-spring.datasource.password=SUA_SENHA
-```
 
 A API estará disponível em: `http://localhost:8080`
 
@@ -67,7 +27,7 @@ O sistema possui logs detalhados para monitorar a conexão com o banco:
    - Driver: MySQL Connector/J
    - Versão do Driver: 8.0.33
    - URL: jdbc:mysql://localhost:3306/consultorio
-   - Usuário: root
+   - Usuário: ****
    - Nome do Banco: MySQL
    - Versão do Banco: 8.0.33
 ```
